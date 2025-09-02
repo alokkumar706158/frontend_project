@@ -1,19 +1,8 @@
-:root {
-  --ink: #1e293b; /* primary text */
-  --muted: #64748b; /* secondary text */
-  --bg: #f6f7fb; /* page bg */
-  --card: #ffffff; /* card bg */
-  --line: #e8ebf2; /* separators */
-  --brand: #2b6cb0; /* royal blue */
-  --accent: #8b5cf6; /* soft violet */
-  --gold: #c9a227; /* luxery accent */
-}
-
 body {
   margin: 0;
   font-family: Inter, system-ui;
-  color: var(--ink);
-  background: var(--bg);
+  color: #f1f5f9; /* light text */
+  background: #000000; /* page background black */
   line-height: 1.65;
 }
 
@@ -22,15 +11,16 @@ h2,
 h3 {
   font-family: "Playfair Display", serif;
   margin: 0 0 0.6rem;
+  color: #f8fafc;
 }
 
 p {
   margin: 0.4rem 0 1rem;
-  color: var(--muted);
+  color: #94a3b8; /* muted text */
 }
 
 ::selection {
-  background: var(--accent);
+  background: #8b5cf6;
   color: white;
 }
 
@@ -39,7 +29,7 @@ p {
   padding: 96px 24px 120px;
   text-align: center;
   color: #fff;
-  background: linear-gradient(to bottom, #0f172a, #1e3a8a, #4338ca);
+  background: linear-gradient(to right, #0f172a, #101010, #0f172a);
   overflow: hidden;
 }
 
@@ -51,7 +41,7 @@ p {
   bottom: 48px;
   width: 120px;
   height: 3px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  background: linear-gradient(90deg, transparent, #c96227, transparent);
   border-radius: 999px;
 }
 
@@ -74,10 +64,10 @@ p {
 }
 
 .card {
-  background: var(--card);
+  background: #0f0f0f; /* dark black box */
   border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
-  border: 1px solid var(--line);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
+  border: 1px solid #1e293b;
   padding: 32px 28px;
 }
 
@@ -88,7 +78,7 @@ p {
 .section-title {
   display: inline-block;
   font-size: 1.4rem;
-  color: var(--ink);
+  color: #f1f5f9;
   position: relative;
   padding-bottom: 8px;
 }
@@ -101,7 +91,7 @@ p {
   width: 56%;
   height: 6px;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--brand), var(--accent));
+  background: linear-gradient(90deg, #2b6cb0, #8b5cf6);
   opacity: 0.15;
 }
 
@@ -111,16 +101,15 @@ p {
   line-height: 1;
   float: left;
   margin: 0.1rem 0.5rem 0 0;
-  color: var(--brand);
+  color: #2b6cb0;
 }
 
 a[target="_blank"] {
-  color: var(--brand);
+  color: #2b6cb0;
   font-weight: 600;
   text-decoration: none;
   border-bottom: 1px solid rgba(43, 108, 176, 0.3);
 }
-/* External link arrow via pseudo-element */
 a[target="_blank"]::after {
   content: " ↗";
   font-weight: 600;
@@ -138,33 +127,29 @@ ul.values li {
   margin: 0.1rem 0 0.35rem;
 }
 ul.values li::marker {
-  color: var(--accent);
+  color: #8b5cf6;
 }
 
 .member {
   position: relative;
   padding: 26px 22px 22px;
   border-radius: 16px;
-  background: linear-gradient(180deg, #ffffff, #fbfbfe);
-  border: 1px solid var(--line);
+  background: linear-gradient(180deg, #0f0f0f, #1a1a1a);
+  border: 1px solid #1e293b;
   transition: transform 0.35s ease, box-shadow 0.35s ease,
     border-color 0.35s ease;
 }
-/* Decorative corner ribbon (pseudo-element) */
 .member::before {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
-  width: 0;
-  height: 0;
   border-left: 24px solid transparent;
   border-bottom: 24px solid transparent;
   border-top: 24px solid rgba(139, 92, 246, 0.18);
   border-right: 24px solid rgba(139, 92, 246, 0.18);
   border-top-right-radius: 14px;
 }
-/* Role badge via attribute selector + pseudo-element */
 .member[data-role="ceo"]::after {
   content: " CEO ";
   position: absolute;
@@ -172,17 +157,16 @@ ul.values li::marker {
   left: 12px;
   font-size: 0.72rem;
   letter-spacing: 0.4px;
-  background: linear-gradient(90deg, var(--gold), #f5e6a8);
+  background: linear-gradient(90deg, #c9a227, #f5e6a8);
   color: #2a2a2a;
   padding: 4px 8px;
   border-radius: 999px;
   border: 1px solid rgba(0, 0, 0, 0.08);
 }
-
 .member:hover {
   transform: translateY(-8px);
-  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
-  border-color: #dfe6fb;
+  box-shadow: 0 16px 36px rgba(255, 255, 255, 0.12);
+  border-color: #334155;
 }
 .member img {
   width: 88px;
@@ -190,32 +174,29 @@ ul.values li::marker {
   border-radius: 50%;
   display: block;
   object-fit: cover;
-  border: 3px solid #eaf0ff;
+  border: 3px solid #1e293b;
   margin-bottom: 10px;
 }
 .member h3 {
   margin: 0.25rem 0 0.25rem;
+  color: #f8fafc;
 }
 .member small {
-  color: var(--muted);
+  color: #94a3b8;
 }
-
-/* Subtle alternation (pseudo-class) */
 .member:nth-child(odd) {
-  background: linear-gradient(180deg, #ffffff, #fefeff);
+  background: linear-gradient(180deg, #111111, #1c1c1c);
 }
 
-/* ---------- Quote ---------- */
 blockquote {
   position: relative;
   margin: 0;
-  background: #f4f7ff;
-  border: 1px dashed #d7dfff;
+  background: #111111;
+  border: 1px dashed #2d3748;
   padding: 22px 24px 24px;
   border-radius: 14px;
-  color: #334155;
+  color: #e2e8f0;
 }
-/* Quote mark (pseudo-element) */
 blockquote::before {
   content: "“";
   position: absolute;
@@ -228,24 +209,22 @@ blockquote::before {
   opacity: 0.35;
 }
 
-/* ---------- CTA ---------- */
 .cta {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 18px;
   flex-wrap: wrap;
-  border: 1px solid var(--line);
+  border: 1px solid #1e293b;
   padding: 22px;
   border-radius: 16px;
-  background: #fff;
+  background: #0f0f0f;
 }
 .cta .btn {
-  --_bg: linear-gradient(90deg, var(--brand), var(--accent));
   padding: 12px 18px;
   border-radius: 999px;
   color: white;
-  background: var(--_bg);
+  /* background: linear-gradient(90deg, #2b6cb0, #8b5cf6); */
   text-decoration: none;
   font-weight: 600;
   box-shadow: 0 8px 18px rgba(43, 108, 176, 0.25);
@@ -253,16 +232,15 @@ blockquote::before {
 }
 .cta .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(43, 108, 176, 0.3);
+  box-shadow: 0 10px 22px rgb(246, 246, 246);
 }
 .cta .btn:focus-visible {
   outline: 3px solid #c7d2fe;
   outline-offset: 2px;
 }
 
-/* ---------- Footer ---------- */
 footer {
   padding: 26px;
   text-align: center;
-  color: #6b7280;
+  color: #9ca3af;
 }
