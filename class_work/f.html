@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+        }
+        fieldset{
+            
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+        input{
+        width: 100%;
+        margin-top: 12px;
+        font-weight: 600;
+        }
+        form{
+            padding:25px 35px;
+            width: 400px;
+        }
+        
+
+    </style>
+</head>
+<body>
+ <form>
+        <fieldset>
+        <label for="Full name" >Full Name *</label>
+        <input type="text" id="Full name" name="" placeholder="Full name">
+        <label>Email *</label>
+        <input type="Email" placeholder="example@gmail.com">
+
+         <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Password">
+
+        
+        <label for="Phone no">Phone No</label>
+        <input type="number" >
+        <label >Date of Birth</label>
+        <input type="date">
+        
+        <label for="Select">Select Course</label>
+        <select name="Select" id="Select">
+            <option value="java">java</option>
+            <option value="math">Math</option>
+            <option value="co">CO</option>
+        </select>
+
+
+        <label >Resume Upload</label>
+        <input type="file">
+        <label for="Gender">Gender</label>
+        <input id="Male" type="radio" name="a" value="Male">
+        <label for="Male">Male</label>
+        <input id="Femail" type="radio" name="a" value="Femail">
+        <label for="Femail">Femail</label>
+
+        <label for="Message">Message</label>
+        <textarea name="Message" id="Message" rows="4" placeholder="Write text...."></textarea>
+
+        <input type="checkbox" name="checkbox" id="checkbox">
+        <label for="checkbox">I Agree to the term & condition</label>
+
+        <input type="submit">
+        </fieldset>
+    </form>
+</body>
+</html>

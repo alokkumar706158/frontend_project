@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0; padding: 0;
+        }
+        
+        .card{
+            background-color: gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            gap: 10px;
+        }
+        .cards{
+            width: 250px;
+            height: 250px;
+            background-color:white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgb(204, 112, 112);
+            font-size: large;
+            border-radius: 25px;
+        }
+        .cards ul{
+            display: inline-block;
+            align-items: center;
+            justify-content: center;
+                    }
+        .cards ul  p{
+            padding-top: 10px;
+
+        }
+       
+        .cards ul h3{
+            margin-bottom: 15px;
+
+        }
+        .cards ul h2{
+            margin-bottom: 15px;
+            color: blue;
+        }
+        .cards button{
+            background-color: blue;
+            font-size: large;
+            height: 30px;
+            width: 60px;
+            border-radius: 20px;
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+        .cards a{
+            color: white;
+            text-decoration: none;
+        }
+        .cards ul button:hover{
+            color: red;
+            background-color: green;
+        }
+        .card .pro{
+            background-color: blue;
+            color: white;
+        }
+        .card .pro h2{
+            color: white;
+        }
+        .pro button{
+            background-color: white;
+
+
+        }
+        .pro a{
+                        color: blue;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="cards">
+            <ul>
+            <h3>Basic</h3>
+            <h2>$9/mo</h2>
+            <p>5 Projects</p>
+            <p>10 GB Storage</p>
+            <p>Email Support</p>
+            <button><a href="#">Pay</a></button>
+            </ul>
+        </div>
+
+         <div class="cards pro">
+            <ul>
+            <h3>Pro</h3>
+            <h2>$29/mo</h2>
+            <p>50 Projects</p>
+            <p>100 GB Storage</p>
+            <p>Prime Support</p>
+            <button><a href="#">Pay</a></button>
+            </ul>
+        </div>
+
+         <div class="cards">
+            <ul>
+            <h3>Premium</h3>
+            <h2>$59/mo</h2>
+            <p>Unlimited</p>
+            <p>10 TB Storage</p>
+            <p>247 Support</p>
+            <button><a href="#">Pay</a></button>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
