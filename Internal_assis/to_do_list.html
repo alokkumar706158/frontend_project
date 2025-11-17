@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>To-Do</title>
+<style>
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#2045a0,#5d1d8a);
+}
+.box{
+  width:350px;
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+}
+h2{
+  margin:0 0 15px
+}
+.input{
+  display:flex;
+  gap:10px;
+}
+input{
+  flex:1;
+  padding:8px;
+  border-radius:20px;
+  border:1px solid #ddd;
+}
+button{
+  padding:8px 16px;
+  background:#ff5722;
+  color:#fff;
+  border:0;
+  border-radius:20px;
+  cursor:pointer;
+}
+ul{
+  padding:0;
+  margin-top:15px
+}
+li{
+  list-style:none;
+  margin:8px 0;
+  padding:6px 10px;
+  background:#f2f2f2;
+  border-radius:6px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+li.done{
+  text-decoration:line-through;
+  opacity:.6;
+}
+.del{
+  background:red;
+  color:#fff;
+  padding:5px 10px;
+  border-radius:5px;
+  cursor:pointer;
+  border:0;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h2>To-Do List</h2>
+
+  <div class="input">
+    <input id="txt" placeholder="Add your task">
+    <button onclick="add()">Add</button>
+  </div>
+
+  <ul id="list"></ul>
+</div>
+
+<script>
+function add(){
+  let t=document.getElementById("txt");
+  if(t.value===""){
+    alert("Enter a task");
+    return;
+  }
+  let li=document.createElement("li");
+  li.innerHTML=t.value+" <button class='del' onclick='del(this)'>X</button>";
+  li.onclick=function(e){
+    if(e.target.tagName!=="BUTTON"){
+      li.classList.toggle("done");
+    }
+  }
+  document.getElementById("list").appendChild(li);
+  t.value="";
+}
+function del(btn){
+  btn.parentElement.remove();
+}
+</script>
+
+</body>
+</html>
