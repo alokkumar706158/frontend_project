@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Live Character Counter</h1>
+    <textarea name="messages" id="message" placeholder="Type yout message..."></textarea>
+    <div class="counter">Characters: <span id="count">0</span></div>
+
+    <script>
+        const message=document.getElementById("message");
+        const count =document.getElementById("count");
+
+        message.addEventListener('input',()=>{
+            count.innerText = message.value.length;
+        })
+    </script>
+</body>
+</html>
